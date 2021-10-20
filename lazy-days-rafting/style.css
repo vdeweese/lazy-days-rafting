@@ -1,136 +1,290 @@
+/* colors
+yellow: F9BE00
+navy: 192B37
+*/
+
 * {
-    padding: 0;
-    margin:0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Noto Sans HK', sans-serif;
-    color: rgb(60,60,65);
-  }
-  
-  img {
-    max-width:100%;
-  }
-  
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
-  
-  /* ------------- Utility Classes --------------  */
-  
-    .left     {  text-align: left;     }
-    .right    {  text-align: right;    }
-    .centered {  text-align: center;   }
-  
-  
-    .padded   {  padding: 5%;    }
-    .padded-05 {  padding: 0.5rem;  }
-    .padded-1 {  padding: 1rem;  }
-    .padded-2 {  padding: 2rem;  }
-  
-    .capped-width { max-width: 1100px; margin: auto;}
-  
-    .tall-50  {  min-height: 50vh;   }
-    .tall-100 {  min-height: 100vh;  }
-  
-    .dark-bg      {  background-color: rgb(90, 90, 95);     }
-    .light-bg     {  background-color: rgb(240, 240, 245);  }
-    .featured-bg  {  background-color: #ffeaa7;             }
-  
-    .light-text   { color: white; }
-    .caps {text-transform: uppercase;}
-  
-  
-    .flex-flip:nth-child(2n){  flex-direction: row-reverse; }
-  
-      /* General typography */
-  
-      h2, h3, h4, h5, h6 {
-      line-height: 1;
-      margin-bottom: 0.8rem;
-      }
-  
-      h2  { font-size: 2.2rem;  }
-      h3  { font-size: 1.8rem;  }
-      h4  { font-size: 1.4rem;  }
-      p   { font-size: 1rem;  }
-  
-      p, ul {
-       margin-bottom: 0.8rem;
-      }
-  
-      /* this makes sure that the last element in any container doesn't have margin-bottom */
-      h2:last-child,
-      h3:last-child,
-      h4:last-child,
-      h5:last-child,
-      h6:last-child,
-      p:last-child {
-      margin-bottom:0;
-      }
-  
-      hr { /* this is a line element */
-      border: none;
-      border-bottom: 3px solid;
-      width: 4rem;
-      margin-bottom: 1rem;
-      }
-  
-  
-      /* Unique Typography Styles */
-  
-      .emphasis {
-        font-size: 1.2rem;
-      }
-  
-      /* Button & Link Styles */
-  
-  
-      a:hover {
-          color: red;
-      }
-      /* We have created lots of different button styles, you probably don't need to have quite this many styles depending on your site */
-  
-      .button,
-      .button-solid,
-      .button-inverted {
-        text-decoration: none;
-        color: rgb(120,120,130);
-        border: 2px solid;
-        padding: 0.6rem 2rem;
-        margin-top: 1rem;
-        display: inline-block;
-        text-transform: uppercase;
-        font-size: 0.9rem;
-        font-weight: 500;
-      }
-  
-      .button:hover {
-        color: rgb(60, 60, 60);
-      }
-  
-      .button.inverted {   /* this is for a button on a dark background */
-        border: 2px solid white;
-        color: white;
-      }
-  
-      .button.inverted:hover {
-        color: #e67e22;
-        border-color: #e67e22;
-      }
-  
-      .button-solid {
-        background-color: #e67e22;
-        border-color: #e67e22;
-        color: white;
-      }
-  
-      .button-solid:hover {
-        background-color: rgb(60, 60, 60);
-        border-color: rgb(60, 60, 60);
-      }
-  
-    
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* ---------- Temporary styles for structural html (first step)*/
+
+/* * {
+  padding: 0.5rem;
+  border: 2px solid rgb(225, 225, 225);
+} */
+
+/* section {
+  padding: 0.5rem;
+  /* border: 2px solid rgb(225,225,225); 
+} */
+
+/* body { border: none;}
+html { border: none;} */
+
+/* ------------ Image styles */
+
+.bg-image {
+  background-size: cover;
+  min-height: 100px;
+}
+
+/* ------------ Universal Styles and Utility Classes */
+
+.padding    { padding: 5%;}
+.padding-sm { padding: 1rem;}
+.padding-lg { padding: 10%;}
+
+.bg-dark { 
+  background-color: #192B37;
+  color: white;       
+}
+
+.bg-light {
+  background-color: #EAE3D1;
+}
+
+/* fonts & colors (Universal Styles) 
+Catamaran
+Extra-light 200
+Regular 400
+Medium 500
+Bold 700
+Extra-bold 800
+*/
+
+body {
+  font-family: 'Catamaran', sans-serif;
+  color: #192B37;
+}
+.tall-50    {min-height: 50vh;}
+.tall-60    {min-height: 60vh;}
+.tall-70    {min-height: 70vh;}
+.tall-80    {min-height: 80vh;}
+.tall-90    {min-height: 90vh;}
+.tall-100   {min-height: 100vh;}
+
+/* ------------------ Typography Styles */
+
+.text-left    {text-align: left;}
+.text-center  {text-align: center;}
+.text-right   {text-align: right;}
+
+/* we want this class to be resusable even if we change the color */
+.color-text             {color: #F9BE00;}
+.white-text             {color: white}
+.font-weight-normal     {font-weight: 400;}
+.font-weight-light      {font-weight: 200;}
+.font-weight-extra-bold {font-weight: 800;}
+
+.small-text  { font-size: 1.5rem;}
+.medium-text { font-size: 1.9rem;
+             line-height: 1.1;}
+.big-text    { font-size: 4rem;}
+
+.subtitle {
+  font-size: 1rem;
+  color: rgb(120,120,125);
+}
+
+.quote-icon {
+  font-size: 5rem;
+  display: inline-block;
+  color: rgb(120,120,125);
+  line-height: 1;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 2.5rem;
+  /* adding line height here will ensure we keep this line of text as we want it even when the page shrinks */
+  line-height:1.1;
+  /* space between h2 and p */
+  margin-bottom: 1rem;
+}
+
+h3 {
+  line-height: 1;
+}
+
+
+p {
+  font-weight: 200;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+
+/* used to element space at the bottom of the last paragrach within each parent */
+p:last-child {
+  margin-bottom: 0;
+}
+
+a {
+  text-decoration: none;
+  border-bottom: 1px solid;
+  color: white;
+}
+
+a:hover {
+  color: #F9BE00;
+}
+
+/* -------------Navication Styles */
+
+.button-nav {
+  color: black;
+  text-decoration: none;
+  /* display: inline-block; */
+  border: 1px solid black;
+  border-radius: 10px;
+  margin-right: 1rem;
+  margin-top: 4rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.button-nav a:hover {
+  background-color: #F9BE00;
+  color: white;
+}
+
+.page-nav {
+  padding: 2rem;
+  text-align: right;
+}
+
+.button-emphasis {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  font-weight: 600;
+}
+
+/* ------------ Header & Footer Styles */
+
+header {
+  background-image: url('/Images/bed-white-new.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+header h3 {
+  font-size: 5.5rem;
+  /* line height is the only space between h1 and h3 since there is no padding or margin. inspect the page to find this out. Line height doesn't need a unit, the number is proportion to the font size itself */
+  line-height: 1;
+}
+
+footer a {
+  border: none;
+}
+
+/* ---------------Background images */
+
+.bg-dog {
+  background-image: url('/Images/sleeping-dog.jpg');
+  background-position: 50% 35%;
+  background-size: cover;
+}
+.bg-bed {
+  background-image: url('/Images/bed-lamp.jpg');
+  background-position: 50% 45%;
+  background-size: cover; 
+}
+
+.bg-pillow {
+  background-image: url('/Images/pillow-yellow.jpg');
+  background-position: 50% 60%;
+}
+
+.bg-stretch {
+  background-image: url('/Images/restful.jpg');
+  background-size: cover;
+  background-position: 50% 55%;
+}
+
+.bg-restful {
+  background-image: url('/Images/restful.jpg');
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.bg-guarantee {
+  background-image: url(/Images/satisfaction-guarantee.png);
+  background-position:center;
+  background-size: cover;
+
+}
+
+/* ---------------- Icon Grid */
+
+/* we are targeting the existing class just to prevent the font-awesome class from overriding any element we styles */
+.fas {
+  display: block;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 3rem;
+}
+
+
+/* ------------------- About Page */
+
+.banner {
+  background-color: rgb(235,235,235);
+  background-size: cover;
+  background-position: center;
+  min-height: 80vh;
+}
+
+
+/* Pricing cards */
+
+.no-bullets {
+  list-style: none;
+}
+
+.card {
+  padding: 2rem;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+.card.featured {
+  border: 2px solid #F9BE00;
+}
+
+.price {
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+.bed-size {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: rgb(120,120,125);
+}
+
+.card .button-buy {
+  margin-top: 2rem;
+}
+
+ul {
+  margin-bottom: 1rem;
+}
+
+.button-buy {
+  border: 2px solid grey;
+  color: grey;
+  display: inline-block;
+  padding-right: 2rem;
+  padding-left:2rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-radius: 1px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+
+}
     
