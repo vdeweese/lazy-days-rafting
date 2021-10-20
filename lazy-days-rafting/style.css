@@ -31,6 +31,7 @@ html { border: none;} */
 .bg-image {
   background-size: cover;
   min-height: 100px;
+  background-repeat: no-repeat;
 }
 
 /* ------------ Universal Styles and Utility Classes */
@@ -62,6 +63,10 @@ html { border: none;} */
 
 .bg-light {
   background-color: #bad3ec;
+}
+
+.bg-featured {
+  background-color: #eca378;
 }
 
 /* fonts & colors (Universal Styles) 
@@ -99,7 +104,7 @@ body {
 
 .subtitle {
   font-size: 1rem;
-  color: rgb(120,120,125);
+  font-weight: 400;
 }
 
 .quote-icon {
@@ -107,7 +112,7 @@ body {
   display: inline-block;
   color: rgb(120,120,125);
   line-height: 1;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 h2 {
@@ -199,6 +204,18 @@ footer a {
 .bg-river {
   background-image: url('/images/river.jpg');
   background-position: center;
+  background-size: cover;
+}
+
+.bg-raft-1 {
+  background-image: url('/images/raft-1.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.bg-paddle {
+  background-image: url('/images/paddle.jpg');
+  background-position: 50% 63%;
   background-size: cover;
 }
 
