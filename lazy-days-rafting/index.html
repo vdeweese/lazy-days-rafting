@@ -10,15 +10,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.7.1/gridlex.min.css" />
 
     <!-- These are our Google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@200;400;500;700;800&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
+    
 
     <!-- This are our font-awesome icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- This is our custom CSS stylesheet. This always goes last! -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/style.css" />
 
 </head>
 <!-- This is the body. All actual content shown on the website is contained here. -->
@@ -26,17 +27,49 @@
 
 <!----------------------- Header Banner -->
     <!-- h1 is the more defining statement, it's the one that will appear in searches and is more important than the content in the h3 which is more of a slogan -->
-    <header class="padding grid text-center tall-100 editable">
+    <header class="padded grid text-center tall-100 editable bg-image bg-river">
+        <div class="header-nav col-12 grid">
+            <div class="col-4">
+                <!-- LOGO -->
+                <a href="/index.html" class="logo">
+                    <h2> Lazy Days Rafting </h2>
+                </a>
+            </div>
+                <!-- Page Links -->
+                <nav class="col-8 right">
+                    <a href="/index.html"> Home</a>
+                    <a href="/about.html"> About </a>
+                    <a href="/tours.html"> Tours </a>
+                    <a href="/contact.html"> Contact </a>
+                </nav>
+        </div>
         <div class="col-12-middle">
-            <h3 class="font-weight-extra-bold"><span class="color-text"> sleep </span> like a baby</h3>
-            <h1 class="font-weight-normal">the ultimate mattress solution</h1>
+            <h3 class="font-weight-bold white-text"> the river is calling </h3>
+            <h1 class="font-weight-light white-text"> rafting adventures for everyone </h1>
         </div>
     </header>
 
+        <!--  ----------------------------Testimonial Section -->
+        <section class="padded-2 grid bg-light">
+            <!-- we will use separate divs for the quotes to style them separately. We will use spans becuase it is the most accurate container (the quotes are not a heading or a paragraph) -->
+            <div class="col-1 text-right quote-icon">
+                <span> “ </span>
+            </div>
+            
+            <div class="col-10 text-center medium-text font-weight-light font-italic editable">
+                <p>This was the most amazing rafting trip I've ever done. My whole family loved it! Lazy Rafting has the most wonderful staff that made us feel both safe and excited.</p>
+                <p class="subtitle">- Traveling Tina, USA</p>
+            </div>
+            
+            <div class="col-1 quote-icon">
+                <span> ” </span>
+            </div>
+        </section>
+
     <!----------------------- Gallery Section -->
     <section class="grid">
-        <div class="padding col-6-middle editable">
-            <h2>built to last a <span class="color-text">lifetime</span></h2>
+        <div class="padded col-6-middle editable">
+            <h2> the <span class="color-text">experience</span></h2>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo ex dicta quam possimus voluptate autem asperiores velit mollitia quasi.</p>
             <p>Oppraesentium eius consequatur sunt totam corporis cumque fugiat sit? Earum, illum!</p>
         </div>
@@ -46,44 +79,44 @@
         <div class="bg-dog col-6 tall-50">
              <!-- background image: sleeping -->
         </div>
-        <div class="padding col-6-middle editable">
-            <h2>so <span class="color-text">soft</span> you'll melt</h2>
+        <div class="padded col-6-middle editable">
+            <h2> the <span class="color-text">memories</span></h2>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis pariatur ipsa ipsum quisquam quidem quae autem ipsam ullam? Distinctio aut culpa placeat temporibus architecto adipisci harum ut commodi dolores assumenda.</p>
         </div>
     </section>
 
     <!-- --------------------Features Section -->
 
-    <section class="padding grid bg-dark tall-60">
+    <section class="padded grid bg-dark tall-60">
         <!-- one div for the title and one div for each column with icon -->
         <div class="col-12 text-center editable">
             <h2><span class="color-text">features</span> you will love</h2>
         </div>
         
-        <div class="padding-sm col-3 editable">
+        <div class="padded-1 col-3 editable">
             <!-- for icons go to cdnjs to use font-awesome css. font-awesome icons are inline elements by default so "text-center" won't work -->
             <p><i class="fas fa-cloud"></i></p>
             <p class="text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt quae voluptas assumenda. Alias aliquam perspiciatis, accusantium veritatis minima reiciendis nam a illum ab quo nulla ipsum minus earum, eius amet.</p>
         </div>
        
-        <div class="padding-sm col-3 editable">
+        <div class="padded-1 col-3 editable">
             <p><i class="fas fa-cloud"></i></p>
             <p class="text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt quae voluptas assumenda. Alias aliquam perspiciatis, accusantium veritatis minima reiciendis nam a illum ab quo nulla ipsum minus earum, eius amet.</p>
         </div>
        
-        <div class="padding-sm col-3 editable">
+        <div class="padded-1 col-3 editable">
             <p><i class="fas fa-cloud"></i></p>
             <p class="text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt quae voluptas assumenda. Alias aliquam perspiciatis, accusantium veritatis minima reiciendis nam a illum ab quo nulla ipsum minus earum, eius amet.</p>
         </div>
        
-        <div class="padding-sm col-3 editable">
+        <div class="padded-1 col-3 editable">
             <p><i class="fas fa-cloud"></i></p>
             <p class="text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt quae voluptas assumenda. Alias aliquam perspiciatis, accusantium veritatis minima reiciendis nam a illum ab quo nulla ipsum minus earum, eius amet.</p>
         </div>
     </section>
 
     <!-- --------------------------- Image Banner -->
-    <section class="padding text-center bg-pillow bg-image tall-60 grid">
+    <section class="padded text-center bg-pillow bg-image tall-60 grid">
         <!-- Make this one heading becuase it is 1 complete sentence -->
         <div class="col-12-middle editable">
             <h3 class="big-text"><span class="small-text font-weight-normal"> never underestimate the power of </span></h3>
@@ -91,26 +124,11 @@
         </div>
     </section>
 
-    <!--  ----------------------------Testimonial Section -->
-    <section class="padding-lg grid">
-        <!-- we will use separate divs for the quotes to style them separately. We will use spans becuase it is the most accurate container (the quotes are not a heading or a paragraph) -->
-        <div class="col-1 text-right quote-icon">
-            <span> “ </span>
-        </div>
-        
-        <div class="col-10 text-center medium-text font-weight-light editable">
-            <p>I've never experienced sleep like this. Omg I really love this mattress I want to buy one for every member of my family.</p>
-            <p class="subtitle">- A very happy customer</p>
-        </div>
-        
-        <div class="col-1 quote-icon">
-            <span> ” </span>
-        </div>
-    </section>
+
 
     <!--  ------------------------------ Footer -->
 
-    <footer class="padding grid-spaceBetween bg-dark">
+    <footer class="padded grid-spaceBetween bg-dark">
         <!-- we are using a col-4 and col-6 with space between -->
         <div class="col-4-bottom editable">
             <h2>let's <span class="color-text"><br />connect </span></h2>
